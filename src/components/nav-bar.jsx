@@ -24,7 +24,7 @@ const Navigation = ({ setShowCardModal }) => {
           <Nav className='justify-content-between'>
             <NavItem>
               <Button
-                variant='primary'
+                variant='secondary'
                 style={{ margin: '0px 5px' }}
                 onClick={() => {
                   setMetaUpdate();

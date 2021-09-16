@@ -1,12 +1,12 @@
 import { AppContext } from '../context/store-context';
 import { useContext } from 'react';
-import { useEffect} from 'react';
-import { useState} from 'react';
+import { useEffect } from 'react';
+import { useState } from 'react';
 import { useRef } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import FloatingLabel from 'react-bootstrap-floating-label';
-import Modal  from 'react-bootstrap/Modal';
+import FloatingLabel from 'react-bootstrap/FloatingLabel'
+import Modal from 'react-bootstrap/Modal';
 
 const CardModal = () => {
   const {
@@ -185,7 +185,7 @@ const CardModal = () => {
             >
               <Form.Control
                 type='text'
-                placeholder='Task 1'
+                placeholder='Plan Something'
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 isInvalid={!validated.title}
@@ -201,7 +201,7 @@ const CardModal = () => {
             >
               <Form.Control
                 as='textarea'
-                placeholder='Work on task 1'
+                placeholder='Continue previous plan.'
                 value={desc}
                 onChange={(e) => setDesc(e.target.value)}
                 style={{ height: '150px' }}
@@ -216,10 +216,7 @@ const CardModal = () => {
               label='Category'
               className='mb-3'
             >
-              <Form.Select
-                aria-label=''
-                ref={refCategory}
-              >
+              <Form.Select aria-label='' ref={refCategory}>
                 <option value='Plan'>Plan</option>
                 <option value='Process'>Process</option>
                 <option value='Complete'>Complete</option>
