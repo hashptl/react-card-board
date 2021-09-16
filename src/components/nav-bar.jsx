@@ -1,17 +1,12 @@
-import { FontAwesome } from 'react-fontawesome';
 import { AppContext } from '../context/store-context';
 import { useContext } from 'react';
-import {
-  Container,
-  Button,
-  Navbar,
-  NavItem,
-  Nav,
-  NavbarBrand,
-} from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
+import Navbar from 'react-bootstrap/Navbar';
+import NavItem from 'react-bootstrap/NavItem';
+import Nav from 'react-bootstrap/Nav';
 
-
-const NavBar = ({ setShowCardModal }) => {
+const Navigation = ({ setShowCardModal }) => {
   const { setMetaUpdate } = useContext(AppContext);
 
   return (
@@ -23,11 +18,10 @@ const NavBar = ({ setShowCardModal }) => {
           expand='md'
           className='justify-content-center'
         >
-          <NavbarBrand href='/'>
+          <Navbar.Brand href='/'>
             <strong>React-card-board</strong>
-          </NavbarBrand>
-
-          <Nav className='mr-auto' navbar>
+          </Navbar.Brand>
+          <Nav className='justify-content-between'>
             <NavItem>
               <Button
                 variant='primary'
@@ -38,7 +32,6 @@ const NavBar = ({ setShowCardModal }) => {
                 }}
               >
                 Add Card
-                <FontAwesome icon='fa-plus' />
               </Button>
             </NavItem>
           </Nav>
@@ -48,4 +41,4 @@ const NavBar = ({ setShowCardModal }) => {
   );
 };
 
-export default NavBar;
+export default Navigation;

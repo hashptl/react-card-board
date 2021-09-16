@@ -1,5 +1,8 @@
 import { AppContext } from '../context/store-context';
-import { useContext, useEffect, useState, useRef } from 'react';
+import { useContext } from 'react';
+import { useEffect} from 'react';
+import { useState} from 'react';
+import { useRef } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap-floating-label';
@@ -214,7 +217,7 @@ const CardModal = () => {
               className='mb-3'
             >
               <Form.Select
-                aria-label='Floating label select example'
+                aria-label=''
                 ref={refCategory}
               >
                 <option value='Plan'>Plan</option>

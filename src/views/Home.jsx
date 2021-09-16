@@ -1,15 +1,17 @@
 import ContainerBox from '../components/container-box';
 import CardModal from '../components/card-modal';
-import NavBar from '../components/nav-bar';
+import Navigation from '../components/nav-bar';
 import { AppContext } from '../context/store-context';
 import { useContext } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 
 const Home = () => {
   const { setShowCardModal } = useContext(AppContext);
   return (
     <>
-      <NavBar setShowCardModal={setShowCardModal} />
+      <Navigation setShowCardModal={setShowCardModal} />
       <Container fluid style={{ padding: '30px 50px' }}>
         <Row xs={1} md={2} lg={3} style={{ justifyContent: 'center' }}>
           <Col>

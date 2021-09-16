@@ -1,6 +1,7 @@
 import { AppContext } from '../context/store-context';
 import { useContext } from 'react';
-import { Button, Card } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 const Cards = ({ title, desc, category, date }) => {
   const { setMetaUpdate, setShowCardModal } = useContext(AppContext);
